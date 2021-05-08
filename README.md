@@ -4,12 +4,12 @@
 
 Run server.py (Python3)
 
-
+## POST
 Use post request for adding new item.
 localhost:9000/input
 Add item to Body as raw data.
 
-Python Code:
+#### Python Code:
 ```
 import requests
 
@@ -22,9 +22,10 @@ headers = {
 
 response = requests.request("POST", url, headers=headers, data=payload)
 
-print(response.text)```
+print(response.text)
+```
 
-Javascript/JQuery Code:
+#### Javascript/JQuery Code:
 ```
 var settings = {
   "url": "localhost:9000/input",
@@ -41,12 +42,12 @@ $.ajax(settings).done(function (response) {
 });
 ```
 
-
+## GET
 Use Get request for querying key.
 localhost:9000/query
 Add key to body as raw data.
 
-Python Code:
+#### Python Code:
 ```
 import requests
 
@@ -62,7 +63,7 @@ response = requests.request("GET", url, headers=headers, data=payload)
 print(response.text)
 
 ```
-Javascript/JQuery Code:
+#### Javascript/JQuery Code:
 ```
 var settings = {
   "url": "localhost:9000/query",
